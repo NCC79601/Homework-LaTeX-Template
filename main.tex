@@ -1,0 +1,40 @@
+\documentclass{homework}
+
+% --- 设置作业信息 ---
+\setstudentname{郑皓文}
+\setstudentid  {2025310456}
+\setclass      {概率与数理统计基础}
+\setexamnum    {第1周作业}
+
+
+\begin{document}
+
+\question{证明\textbf{对于}任意实数 $x$，都有 $e^x \ge 1+x$。}
+    \begin{proof}
+    令函数 $g(x) = e^x - 1 - x$。
+    求导得 $g'(x) = e^x - 1$。
+    ... (解答和证明过程) ...
+    \end{proof}
+
+\question{计算不定积分 $\int (4x^2 - \frac{3}{4}x + 1) \, dx$。}
+
+    \textbf{解答：}
+    $$
+    \int \left(4x^2 - \frac{3}{4}x + 1\right) \, dx = \frac{4}{3}x^3 - \frac{3}{8}x^2 + x + C
+    $$
+    其中 $C$ 是积分常数。
+
+\question{考虑事件 $A$ 和 $B$，$P(A)=0.5$，$P(B)=0.6$，且 $P(A \cap B)=0.3$。} % 题面会自动编号为 题目 3.
+    \begin{enumerate}[(a)] % 可以在 \question 后继续使用列表来处理子问题
+        \item 计算 $P(A \cup B)$。
+        \item 计算 $P(A^c)$。
+    \end{enumerate}
+
+    \textbf{解答：}
+    \begin{enumerate}[(a)]
+        \item $P(A \cup B) = 0.5 + 0.6 - 0.3 = \mathbf{0.8}$
+        \item $P(A^c) = 1 - 0.5 = \mathbf{0.5}$
+    \end{enumerate}
+
+
+\end{document}
