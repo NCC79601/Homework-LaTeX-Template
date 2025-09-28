@@ -17,6 +17,13 @@
 \RequirePackage{pgfplots}
 \RequirePackage{listings}
 \RequirePackage{tikz}
+\RequirePackage[
+    colorlinks=true,        % 使用颜色而不是边框来标识链接
+    linkcolor=blue,         % 内部链接颜色 (\eqref, \ref)
+    citecolor=green,        % 引用链接颜色 (\cite)
+    urlcolor=cyan,          % URL链接颜色
+    pdfborder={0 0 0}       % 将边框宽度设为 0
+]{hyperref} 
 
 % --- 全局设置 ---
 \pgfplotsset{width=10cm,compat=1.9}
