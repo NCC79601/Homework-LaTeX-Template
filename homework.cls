@@ -8,7 +8,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{amsmath,amssymb}
-\RequirePackage{amsthm}
+\RequirePackage{amsthm} % 提供 proof 环境
 \RequirePackage{multicol}
 \RequirePackage[shortlabels]{enumitem}
 \RequirePackage{siunitx}
@@ -50,7 +50,7 @@
 % 定义一个名为 'question' 的新计数器，继承自 'section' 的样式
 \newcounter{question}[section] 
 
-% 定义 question 编号的显示格式（例如：'题目 1'，如果使用 section，可能是 '1.1 题目'）
+% 定义 question 编号的显示格式（例如：'题目 1'）
 \renewcommand{\thequestion}{\arabic{question}} 
 
 % 定义 \question 命令
@@ -66,6 +66,26 @@
     
     \par\vskip 0.5\baselineskip % 在题面后添加一些垂直间距
 }
+
+
+% --- 自定义解答环境 (Solution Environment) ---
+% 定义一个新的定理样式 'kaiti' 用于 solution 环境
+\theoremstyle{definition} % 基于 definition 样式，它通常是直立字体
+\makeatletter
+\newtheoremstyle{kaiti}%
+  {\topsep}
+  {\topsep}
+  {\normalfont}
+  {}
+  {\kaishu}
+  {.}
+  {.5em}
+  {}
+\makeatother
+
+% 使用我们定义的 'kaiti' 样式来创建 'solution' 环境
+\theoremstyle{kaiti}
+\newtheorem*{solution}{解}
 
 
 % --- 文档开始钩子：确保页面样式正确 ---
