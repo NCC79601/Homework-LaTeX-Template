@@ -33,3 +33,4 @@
 *.ps
 *.thm
 *.synctex
+*.synctex(busy)
